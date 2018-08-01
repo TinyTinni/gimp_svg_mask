@@ -1,6 +1,7 @@
 # Gimp Plugin for SVG Masks
 
-![Example](./images/example_banner.svg)
+![Example](https://cdn.rawgit.com/TinyTinni/gimp_svg_mask/master/images/example_banner.svg)
+![Valid SVG 1.1](http://www.w3.org/Icons/valid-svg11)
 
 As you may know, the _jpeg_ file format cannot save an alpha-channel, which is often used for transparency, of any image.
 Another popular format, _png_, is able to save the alpha channel, but it is
