@@ -24,9 +24,9 @@ the alpha channel and the svg file which stiches everything together.
 
 The other mode, _embed_, saves everything in the svg file.
 
-- The first mode **not embed** requires ~30% less space than the second mode, but you have to keep all the files. The produces svg just links to the images.
+- The first mode, **not embed**, requires ~30% less space than the second mode, but you have to keep all the files. The produces svg just links to the images.
 
-- The second mode **embed** requires more space, but everything is encoded in the svg file.
+- The second mode, **embed**, requires more space, but everything is encoded in the svg file.
 
 ## Space Consumption Comparison
 

@@ -45,10 +45,12 @@ def plugin_main(img, drawable, jpeg_output, mask_output, svg_output, embed):
     if embed:
         img_write_method = img_embedded
 
+    #create mask
     mask = pdb.gimp_layer_create_mask(img.active_layer, ADD_MASK_ALPHA)
+    
     # save files with default jpg/png settings
-    pdb.gimp_file_save(img, drawable, jpeg_output, jpeg_output)#, 0.9, 0.0, 2, 0, "", 0, 0, 0, 0)
-    pdb.gimp_file_save(img, mask, mask_output, mask_output)#, False, 9, True, True, True, True, True)
+    pdb.gimp_file_save(img, drawable, jpeg_output, jpeg_output)
+    pdb.gimp_file_save(img, mask, mask_output, mask_output)
     svg_mask_image(svg_output, jpeg_output, mask_output, (drawable.width, drawable.height), img_write_method)
 
 register(
@@ -66,12 +68,10 @@ register(
         "<Image>/Image/Export with alpha mask ...",
         "RGBA, GRAYA",
         [
-            #(PF_IMAGE, "img", "input image", None),
-            #(PF_DRAWABLE, "drawable", "input drawable", None),
-            (PF_FILENAME, "jpeg_output" ,"jpeg outputfile", "image.jpg"),
-            (PF_FILENAME, "mask_output", "mask outputfile", "mask.png"),
-            (PF_FILENAME, "svg_output", "svg outputfile", "output.svg"),
-            (PF_TOGGLE, "embed", "embed images into svg file", False)
+            (PF_FILENAME, "jpeg_output" ,"jpeg out file", "image.jpg"),
+            (PF_FILENAME, "mask_output", "mask out file", "mask.png"),
+            (PF_FILENAME, "svg_output", "svg out file", "output.svg"),
+            (PF_TOGGLE, "embed", "Embed images into svg file", True)
         ],
         [],
         plugin_main)
