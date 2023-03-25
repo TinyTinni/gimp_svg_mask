@@ -2,7 +2,7 @@
 
 With this Plugin, you can export a given RGBA image to an svg with a RGB image plus a mask image.
 
-![Example](https://cdn.rawgit.com/TinyTinni/gimp_svg_mask/master/images/example_banner.svg)
+![Example](images/example_banner.svg)
 ![Valid SVG 1.1](http://www.w3.org/Icons/valid-svg11)
 
 As you may know, the _jpeg_ file format cannot save an alpha-channel, which is often used for transparency, of any image.
