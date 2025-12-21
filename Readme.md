@@ -19,10 +19,14 @@ The top image is such a svg file (see [Image Source](./images/example_banner.svg
 
 ## How to Install/Use
 
-Place the [python script file](./plug-ins/masked_svg.py) under plug-ins in the GIMP plugin folder.
+Place the [python script file](./plug-ins/masked_svg/masked_svg.py) under plug-ins in the GIMP plugin folder.
 The directory is usually located somewhere:
 - Windows: %AppData%\Roaming\GIMP\\<Version\>\plug-ins
-- Linux (GIMP 2.10): ~/.config/GIMP/2.10/plug-ins
+- Linux (GIMP 3): ~/.config/GIMP/3.0/plug-ins
+
+NOTE: the directory "masked_svg" must be in the plug-ins directory. The python script must be in this directory. Your tree should look like "GIMP/3.0/plug-ins/masked_svg/masked.svg.py".
+
+NOTE for Linux: The python script must be executable. You may have to add the execution right with the command "chmod +x masked_svg.py"
 
 You can find a new option now under the menu: _Image->Export with alpha mask..._  
 
